@@ -1,3 +1,4 @@
+require 'pry'
 class Artist 
   attr_accessor :name
   
@@ -20,7 +21,7 @@ class Artist
   
   def self.song_count
     arr = Song.all.select {|song| song.artist.name == self.name}
-  
+    binding.pry
     return arr.count
   end
 end 
