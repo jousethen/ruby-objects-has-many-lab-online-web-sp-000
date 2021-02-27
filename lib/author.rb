@@ -21,7 +21,6 @@ class Author
   end
   
   def self.post_count
-    arr = Post.all.select{|post| post.author.name == self.name}
-    return arr.count
+    Post.all.count
   end
 end 
