@@ -20,7 +20,7 @@ class Artist
   end
   
   def self.song_count
-    arr = Song.all.select {|song| song.artist.name == self.name}
+    arr = Song.all.select {|song| song.artist.name == @name}
     binding.pry
     return arr.count
   end
